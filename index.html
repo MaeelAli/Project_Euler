@@ -3,8 +3,10 @@
   <head>
     <title>The Odin Project - Project Euler using JavaScript </title>
     <link rel="stylesheet" type="text/css" href="css/project_euler.css">
-    <script type="text/javascript" src="js/3_LargestPrimeFactor.js"> </script>
     <script type="text/javascript" src="js/1_Multiples_of_3_and_5.js"> </script>
+    <script type="text/javascript" src="js/2_Even_Fibonacci_Numbers.js"> </script>
+    <script type="text/javascript" src="js/3_LargestPrimeFactor.js"> </script>
+   
   </head>
   <body>
     <div id="logo">
@@ -40,7 +42,13 @@
 				</center>
 			<br>
 			By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
+			<br>
       	</p>
+      	<input id="Problem2TextBox" type="text" value="4000000">
+	  	<input id="Problem2Button" type="button" value="Answer" onClick="document.getElementById('p2Answer').innerHTML = evenFibonacciNum(document.getElementById('Problem2TextBox').value)">
+	  	<br>
+	  	<label style="font-weight:bold">Sum: </label>
+	  	<label id="p2Answer"></label>
     </div>
     <div id="Problem3" class="Problem">
     	<h1> Problem 3: </h1>
@@ -48,11 +56,11 @@
       	<p>
       		The prime factors of 13195 are 5, 7, 13 and 29.
       		<br>
-			Input a number and click the submit button to get the largest prime factor for your number.<br> If you do not enter a number or incorrect input, it will return LPF for 13195.
+			Input a number and click the submit button to get the largest prime factor for your number.
 			<br>	
       	</p>
       	<label style="font-weight:bold">Input #:</label>
-      	<input id="Problem3TextBox" type="text">
+      	<input id="Problem3TextBox" type="text" value="13195">
       	<script>
       		function getTextValue(){
       			return document.getElementById('Problem3TextBox').value;
@@ -62,7 +70,7 @@
 		      	if (isNaN(p3Input) || p3Input === "")
 		      	{
 		      		
-		      		document.getElementById('LPFAnswer').innerHTML = largestPrimeFactor(13195);
+		      		document.getElementById('LPFAnswer').innerHTML = 0;
 		      	}
 		      	else
 		      	{

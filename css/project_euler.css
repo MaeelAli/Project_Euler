@@ -1,0 +1,14 @@
+body {
+  font: 80% arial, helvetica, sans-serif;
+  margin: 10 auto;
+}
+
+#logo {
+  margin: auto;
+  vertical-align: top;
+  border: 0;
+}
+
+.Problem {
+	border: 1px solid;
+}

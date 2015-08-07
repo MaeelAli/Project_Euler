@@ -4,6 +4,7 @@
     <title>The Odin Project - Project Euler using JavaScript </title>
     <link rel="stylesheet" type="text/css" href="css/project_euler.css">
     <script type="text/javascript" src="js/3_LargestPrimeFactor.js"> </script>
+    <script type="text/javascript" src="js/1_Multiples_of_3_and_5.js"> </script>
   </head>
   <body>
     <div id="logo">
@@ -16,9 +17,16 @@
       	<p>
       	  	If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
       		<br>
-		  	Find the sum of all the multiples of 3 or 5 below 1000.
+		  	Find the sum of all the multiples of 3 or 5 below 1000.<br>
+		  	Or enter your own number to find the sum of all multiples of 3 or 5 below that.
 		  	<br>
 	  	</p>
+	  	<input id="Problem1TextBox" type="text" value="1000">
+	  	<input id="Problem1Button" type="button" value="Answer" onClick="document.getElementById('p1Answer').innerHTML = sumMult3and5(document.getElementById('Problem1TextBox').value)">
+	  	<br>
+	  	<label style="font-weight:bold">Sum: </label>
+	  	<label id="p1Answer"></label>
+
 	  	
     </div>
     <div id="Problem2" class="Problem"> 
@@ -62,7 +70,7 @@
 		      	}
 	      	}
       	</script>
-      	<input id="Problem1Button" type="button" value="Submit" onClick="Problem3()">
+      	<input id="Problem3Button" type="button" value="Submit" onClick="Problem3()">
       	<br>
       	<label style="font-weight:bold">Largest Prime Factor: </label>
       	<label id="LPFAnswer"></label>

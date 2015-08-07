@@ -43,6 +43,7 @@
 			Input a number and click the submit button to get the largest prime factor for your number.<br> If you do not enter a number or incorrect input, it will return LPF for 13195.
 			<br>	
       	</p>
+      	<label style="font-weight:bold">Input #:</label>
       	<input id="Problem3TextBox" type="text">
       	<script>
       		function getTextValue(){
@@ -52,15 +53,19 @@
 	      		var p3Input = getTextValue();
 		      	if (isNaN(p3Input) || p3Input === "")
 		      	{
-		      		alert("Largest Prime factor for 13195 is " + largestPrimeFactor(13195));
+		      		
+		      		document.getElementById('LPFAnswer').innerHTML = largestPrimeFactor(13195);
 		      	}
 		      	else
 		      	{
-		      		alert("Largest Prime factor for " + p3Input + " is " + largestPrimeFactor(p3Input));
+		      		document.getElementById('LPFAnswer').innerHTML = largestPrimeFactor(p3Input);
 		      	}
 	      	}
       	</script>
-      	<input id="Problem1Button" type="button" value="Answer" onClick="Problem3()">
+      	<input id="Problem1Button" type="button" value="Submit" onClick="Problem3()">
+      	<br>
+      	<label style="font-weight:bold">Largest Prime Factor: </label>
+      	<label id="LPFAnswer"></label>
     </div>  
   </body>
 </html>
